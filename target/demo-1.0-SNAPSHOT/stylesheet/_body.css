@@ -5,15 +5,32 @@ body{
     font-weight: 300;
 }
 .logo{
-    text-align: center;
+    text-align: left;
 }
 .clearfix{
     clear:both;
 }
 form{
-    padding: 1rem;
+    margin-top: 2rem !important;
+    padding-top: 1rem !important;
+    border: 1px Solid #000000;
+}
+
+label{
+    color: #000000 !important;
+    font-weight: bold;
 }
 
 .box-checkbox span{
     margin-right: 1rem;
+}
+
+.btn-secondary{
+    background-color: #aeadb3 !important;
+}
+
+h1{
+    font-size: 1.8rem !important;
+    margin-bottom: 5px !important;
+    font-weight: bold !important;
 }

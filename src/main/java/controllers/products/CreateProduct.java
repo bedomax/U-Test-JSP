@@ -1,29 +1,30 @@
-package controllers;
+package controllers.products;
 
-import bean.Solicitud;
+import DAO.ProductDAO;
+import models.Product;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
 
-public class FormsServlet extends HttpServlet{
+public class CreateProduct extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/forms/new.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/products/new.jsp");
         dispatcher.forward(req, resp);
     }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Solicitud solicitud = new Solicitud(req);
-        req.setAttribute("solicitud",solicitud);
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/forms/thanks.jsp");
+        /* Create Product */
+        Product product = new Product(req);
+        new ProductDAO().add(product);
+        req.setAttribute("product",product);
+        /* Fin */
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/products/show.jsp");
         dispatcher.forward(req, resp);
     }
 }

@@ -5,18 +5,28 @@
          version="4.0">
 
     <servlet-mapping>
-        <servlet-name>Form</servlet-name>
+        <servlet-name>Create Product</servlet-name>
         <url-pattern></url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>Form</servlet-name>
-        <url-pattern>/gracias</url-pattern>
+        <servlet-name>Create Product</servlet-name>
+        <url-pattern>/show</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>List Products</servlet-name>
+        <url-pattern>/listados</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Form</servlet-name>
-        <servlet-class>controllers.FormsServlet</servlet-class>
+        <servlet-name>Create Product</servlet-name>
+        <servlet-class>controllers.products.CreateProduct</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>List Products</servlet-name>
+        <servlet-class>controllers.products.ListProducts</servlet-class>
     </servlet>
 
 </web-app>

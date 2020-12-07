@@ -1,0 +1,7 @@
+434123;Pan de Molde;4.12;4
+121255;Mermelada;1.12;10
+000255;Galletas Ducles;3;20
+000256;Galletas Saladas;2.20;20
+001016;Leche;1.30;30
+001017;Jugos;1.80;301234;Pan Marraqueta;10.0;5
+1234;Pan Batido;10.0;5
